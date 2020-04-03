@@ -9,6 +9,10 @@ The Open Neural Network Exchange implementation in MLIR.
 gcc >= 6.4
 libprotoc >= 3.11.0
 cmake >= 3.15.4
+
+sudo apt-get install  libprotobuf-dev protobuf-compiler
+libxml2
+
 ```
 
 ## Installation
