@@ -10,8 +10,12 @@ gcc >= 6.4
 libprotoc >= 3.11.0
 cmake >= 3.15.4
 
+protobuffer:
 sudo apt-get install  libprotobuf-dev protobuf-compiler
 libxml2
+llvm:
+sudo apt-get install Z3
+sudo apt-get install ocaml
 
 ```
 
