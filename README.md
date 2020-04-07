@@ -72,6 +72,12 @@ mkdir onnx-mlir/build && cd onnx-mlir/build
 cmake ..
 cmake --build . --target onnx-mlir
 
+====================================================================================================
+/usr/bin/ld: /home/leon/Cambricon/code/mlir/llvm-project/build/lib/libLLVMSupport.a(Compression.cpp.o): undefined reference to symbol 'crc32'
+/usr/lib/x86_64-linux-gnu/libz.so: error adding symbols: DSO missing from command line
+collect2: error: ld returned 1 exit status
+
+====================================================================================================
 # Run FileCheck tests:
 export LIT_OPTS=-v
 cmake --build . --target check-mlir-lit
