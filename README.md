@@ -39,6 +39,18 @@ cmake -G Ninja ../llvm \
    -DLLVM_ENABLE_RTTI=ON
 
 cmake --build . --target -- ${MAKEFLAGS}
+====================================================================================================
+[2275/2331] Building CXX object exampl...ports.dir/LLJITWithLazyReexports.cpp.o
+FAILED: examples/LLJITExamples/LLJITWithLazyReexports/CMakeFiles/LLJITWithLazyReexports.dir/LLJITWithLazyReexports.cpp.o 
+/usr/bin/c++  -DBUILD_EXAMPLES -D_DEBUG -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -Iexamples/LLJITExamples/LLJITWithLazyReexports -I/home/leon/Cambricon/code/mlir/llvm-project/llvm/examples/LLJITExamples/LLJITWithLazyReexports -I/home/leon/Cambricon/anaconda3/include/libxml2 -Iinclude -I/home/leon/Cambricon/code/mlir/llvm-project/llvm/include -fPIC -fvisibility-inlines-hidden -Werror=date-time -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wno-missing-field-initializers -pedantic -Wno-long-long -Wimplicit-fallthrough -Wno-maybe-uninitialized -Wno-noexcept-type -Wdelete-non-virtual-dtor -Wno-comment -fdiagnostics-color -ffunction-sections -fdata-sections -O3     -fno-exceptions -UNDEBUG -std=c++14 -MD -MT examples/LLJITExamples/LLJITWithLazyReexports/CMakeFiles/LLJITWithLazyReexports.dir/LLJITWithLazyReexports.cpp.o -MF examples/LLJITExamples/LLJITWithLazyReexports/CMakeFiles/LLJITWithLazyReexports.dir/LLJITWithLazyReexports.cpp.o.d -o examples/LLJITExamples/LLJITWithLazyReexports/CMakeFiles/LLJITWithLazyReexports.dir/LLJITWithLazyReexports.cpp.o -c /home/leon/Cambricon/code/mlir/llvm-project/llvm/examples/LLJITExamples/LLJITWithLazyReexports/LLJITWithLazyReexports.cpp
+/home/leon/Cambricon/code/mlir/llvm-project/llvm/examples/LLJITExamples/LLJITWithLazyReexports/LLJITWithLazyReexports.cpp: In lambda function:
+/home/leon/Cambricon/code/mlir/llvm-project/llvm/examples/LLJITExamples/LLJITWithLazyReexports/LLJITWithLazyReexports.cpp:110:16: error: could not convert ‘TSM’ from ‘llvm::orc::ThreadSafeModule’ to ‘llvm::Expected<llvm::orc::ThreadSafeModule>’
+         return TSM;
+                ^~~
+[2276/2331] Building CXX object exampl...LJITWithCustomObjectLinkingLayer.cpp.o
+ninja: build stopped: subcommand failed.
+
+====================================================================================================
 cmake --build . --target check-mlir
 ```
 
